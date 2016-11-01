@@ -1,3 +1,7 @@
 .pusher {
   padding: 5%;
 }
+
+[data-ember-action] {
+  cursor: pointer;
+}
