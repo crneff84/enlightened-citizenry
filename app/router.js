@@ -16,7 +16,7 @@ Router.map(function() {
   //
   this.route('senatecommittees');
   this.route('bills');
-  this.route('senatesubcommittees', {path: '/senatesubcommittees/:committee_id'});
+  this.route('senatesubcommittees', {path: '/senatecommittees/subcommittees/:committee_id'});
 });
 
 export default Router;

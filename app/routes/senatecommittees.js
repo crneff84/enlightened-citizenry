@@ -13,7 +13,6 @@ export default Ember.Route.extend({
   actions: {
     routeSubcommittees(params) {
       this.transitionTo('senatesubcommittees', params.committee_id)
-      console.log(params.committee_id);
     },
   }
 });
