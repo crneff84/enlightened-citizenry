@@ -1,0 +1,23 @@
+<div class="ui fixed inverted menu">
+  <div class="ui container">
+    <a href="/" class="header item">
+      Legislator Lookup
+    </a>
+    {{#link-to 'index' class="header item"}}Home{{/link-to}}
+    {{#link-to 'senatecommittees' class="header item"}}Senate Committees{{/link-to}}
+    {{#link-to 'bills' class="header item"}}Bills{{/link-to}}
+  </div>
+  <div class="ui button nav navbar-nav navbar-right blue item" {{action 'toggleSidebar' 'sub-sidebar'}}>{{fa-icon "bars"}}</div>
+</div>
+
+
+<div class="ui pushable segment component context">
+  {{#ui-sidebar class="inverted menu right inline vertical" context=".component.context" id="sub-sidebar"}}
+    <span class="item">{{#link-to 'index'}}Home{{/link-to}}</span>
+  {{/ui-sidebar}}
+  <div class="pusher">
+    <div class="ui basic segment" style="height: 100%;">
+      {{outlet}}
+    </div>
+  </div>
+</div>
